@@ -315,10 +315,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a31f1a6b2bb3431ba4edb776fa66aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _blade: {fileID: 3324061284139541547}
   _tip: {fileID: 7962570827346768803}
   _base: {fileID: 951941211920542600}
   _meshParent: {fileID: 1208295778480680454}
   _trailFrameLength: 0
+  _colour: {r: 68.5935, g: 17.953932, b: 8.735965, a: 1}
 --- !u!1 &5228436238322099942
 GameObject:
   m_ObjectHideFlags: 0

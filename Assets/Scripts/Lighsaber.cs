@@ -5,8 +5,12 @@ using UnityEngine;
 public class Lighsaber : MonoBehaviour
 {
     //The number of vertices to create per frame
-    private const int NUM_VERTICES = 12; 
+    private const int NUM_VERTICES = 12;
 
+    [SerializeField]
+    [Tooltip("The blade object")]
+    private GameObject _blade = null;
+     
     [SerializeField]
     [Tooltip("The empty game object located at the tip of the blade")]
     private GameObject _tip = null;
@@ -23,6 +27,11 @@ public class Lighsaber : MonoBehaviour
     [Tooltip("The number of frame that the trail should be rendered for")]
     private int _trailFrameLength = 3;
 
+    [SerializeField]
+    [ColorUsage(true, true)]
+    [Tooltip("The colour of the blade and trail")]
+    private Color _colour = Color.red;
+
     private Mesh _mesh;
     private Vector3[] _vertices;
     private int[] _triangles;
@@ -36,6 +45,15 @@ public class Lighsaber : MonoBehaviour
         _meshParent.transform.position = Vector3.zero;
         _mesh = new Mesh();
         _meshParent.GetComponent<MeshFilter>().mesh = _mesh;
+
+        Material trailMaterial = Instantiate(_meshParent.GetComponent<MeshRenderer>().sharedMaterial);
+        trailMaterial.SetColor("Color_8F0C0815", _colour);
+        _meshParent.GetComponent<MeshRenderer>().sharedMaterial = trailMaterial;
+
+        Material bladeMaterial = Instantiate(_blade.GetComponent<MeshRenderer>().sharedMaterial);
+        bladeMaterial.SetColor("Color_AF2E1BB", _colour);
+        _blade.GetComponent<MeshRenderer>().sharedMaterial = bladeMaterial;
+
         _vertices = new Vector3[_trailFrameLength * NUM_VERTICES];
         _triangles = new int[_vertices.Length];
 
