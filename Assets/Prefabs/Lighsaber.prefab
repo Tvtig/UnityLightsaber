@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 4009138538441950489}
   - component: {fileID: 4613775260326807885}
   - component: {fileID: 4910991347323683640}
+  - component: {fileID: 7862158902037504729}
   m_Layer: 0
   m_Name: Blade
   m_TagString: Untagged
@@ -190,6 +191,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7862158902037504729
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3324061284139541547}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7401353886334607404, guid: 325e382a3d6744a6990f2c0336e12153, type: 3}
 --- !u!1 &4052355585630541742
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,6 +295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3719635888706794418}
   - component: {fileID: 63920349050931210}
+  - component: {fileID: 7811457834246155013}
   m_Layer: 0
   m_Name: Lighsaber
   m_TagString: Untagged
@@ -319,8 +335,25 @@ MonoBehaviour:
   _tip: {fileID: 7962570827346768803}
   _base: {fileID: 951941211920542600}
   _meshParent: {fileID: 1208295778480680454}
-  _trailFrameLength: 0
+  _trailFrameLength: 5
   _colour: {r: 68.5935, g: 17.953932, b: 8.735965, a: 1}
+  _forceAppliedToCut: 3
+--- !u!54 &7811457834246155013
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4095211935016544520}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5228436238322099942
 GameObject:
   m_ObjectHideFlags: 0
