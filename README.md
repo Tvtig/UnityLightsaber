@@ -5,6 +5,8 @@ I modelled a Lighstaber in blender, you can find the blender file in the Blender
 
 Once you've opened the project in unity, navigate to the scenes folder and open the sample scene, I have setup a basic demo of the Lighsaber prefab.
 
+The Mesh cutting scene is called CutStuff. 
+
 This repo is for educational purposes 
 
 Lightsaber is a term created and owned by Lucasfilms.
